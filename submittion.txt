@@ -41,7 +41,7 @@ ninja3third = Ninja.objects.create(first_name="name333",last_name="last333",dojo
  
 TODO: Query: Retrieve all the ninjas from the first dojo
 
-my_dojo = Dojo.objects.first() # selecting the first dojo
+my_dojo = Dojo.objects.first()
 
 Dojo.objects.first().ninjas.all()
  
@@ -51,12 +51,18 @@ Dojo.objects.last().ninjas.all()
  
 TODO: Query: Retrieve the last ninja's dojo
 
-
+Ninja.objects.last().dojo.name
  
 TODO: Add a new text field called "desc" to your Dojo class
+
+desc = models.TextField(default="old dojo")
  
 TODO: Create and run the migration files to update the table in your database. If needed, provide a default value of "old dojo"
+
+done
  
 TODO: Query: Create a new dojo
+
+dojo_new = Dojo.objects.create(name="dojonew",city="djolast", state="palestine")
  
 Submit your .txt file that contains all the queries you ran in the shell
